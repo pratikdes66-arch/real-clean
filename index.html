@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JM Cakes | Artisan Bakery & Luxury Cake Atelier</title>
+  <meta name="description" content="Handcrafted bespoke cakes, artisan pastries, and specialty celebration cakes made with love in Hobart since 2015. Gluten-free, vegan, and custom orders available.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome / Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Floating side indicator from reference image -->
+  <div class="side-brand-tag" aria-hidden="true">
+    <span>ANY TYPE OF CAKE YOU NEED</span>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="top-announcement">
+    <div class="container announcement-content">
+      <span>✨ Freshly baked daily in Hobart &bull; Accepting bespoke orders for weddings & weekends &bull; Free local delivery over $120 ✨</span>
+      <div class="announcement-links">
+        <a href="#tasting"><i class="fa-solid fa-calendar-check"></i> Book a Tasting</a>
+        <a href="#contact"><i class="fa-solid fa-location-dot"></i> Salamanca Atelier</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <nav class="nav-links nav-left">
+        <a href="#hero" class="nav-link active">HOME</a>
+        <a href="#cakes" class="nav-link">CAKES</a>
+        <a href="#about" class="nav-link">ABOUT US</a>
+      </nav>
+
+      <!-- Center Logo (Faithful to Reference Image) -->
+      <a href="#hero" class="brand-logo" aria-label="JM Cakes Home">
+        <div class="logo-crest">
+          <svg class="crest-svg" viewBox="0 0 70 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Crown / Tier motif -->
+            <path d="M23 18L35 8L47 18L43 28H27L23 18Z" stroke="#E5C07B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="35" cy="6" r="2.5" fill="#E5C07B"/>
+            <circle cx="21" cy="17" r="2" fill="#E5C07B"/>
+            <circle cx="49" cy="17" r="2" fill="#E5C07B"/>
+            <!-- Elegant 'M' interlaced with 'J' -->
+            <path d="M18 52V28L35 44L52 28V52" stroke="#E5C07B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M28 52H42" stroke="#E5C07B" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="logo-text">JM</span>
+          <span class="logo-sub">CAKES</span>
+        </div>
+      </a>
+
+      <nav class="nav-links nav-right">
+        <a href="#dietary" class="nav-link">DIETARY</a>
+        <a href="#contact" class="nav-link">CONTACT US</a>
+        
+        <div class="header-actions">
+          <a href="tel:111-000-111" class="phone-pill-btn" title="Call JM Cakes hotline">
+            <i class="fa-solid fa-phone"></i>
+            <span>111-000-111</span>
+          </a>
+          
+          <button class="cart-btn" id="openCartBtn" aria-label="View shopping bag" title="Shopping Bag">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-header">
+        <div class="mobile-logo">JM CAKES</div>
+        <button class="mobile-drawer-close" id="closeMobileDrawerBtn">&times;</button>
+      </div>
+      <a href="#hero" class="mobile-link">HOME</a>
+      <a href="#occasions" class="mobile-link">OCCASIONS</a>
+      <a href="#about" class="mobile-link">ABOUT US</a>
+      <a href="#dietary" class="mobile-link">SPECIAL DIETARY</a>
+      <a href="#cakes" class="mobile-link">CAKE CATALOG</a>
+      <a href="#gallery" class="mobile-link">GALLERY</a>
+      <a href="#tasting" class="mobile-link">BOOK TASTING</a>
+      <a href="#contact" class="mobile-link">CONTACT & HOURS</a>
+      <div class="mobile-actions">
+        <a href="tel:111-000-111" class="phone-pill-btn mobile-phone">
+          <i class="fa-solid fa-phone"></i> Call 111-000-111
+        </a>
+        <button class="btn-gold btn-block" onclick="openCustomizerModal()">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Build Custom Cake
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="hero-section" id="hero">
+    <!-- Ambient glowing backgrounds & chocolate effects -->
+    <div class="hero-backdrop-glow"></div>
+    
+    <!-- Floating Strawberries & 3D Chocolate Chunks (From reference image) -->
+    <div class="floating-elements" aria-hidden="true">
+      <div class="floating-item berry berry-1">
+        <span class="berry-emoji">🍓</span>
+      </div>
+      <div class="floating-item berry berry-2">
+        <span class="berry-emoji">🍓</span>
+      </div>
+      <div class="floating-item berry berry-3">
+        <span class="berry-emoji">🍓</span>
+      </div>
+      <div class="floating-item berry berry-4">
+        <span class="berry-emoji">🍓</span>
+      </div>
+      
+      <!-- 3D Isometric Chocolate Cubes -->
+      <div class="floating-item choco choco-1">
+        <div class="choco-cube">
+          <div class="choco-face top"></div>
+          <div class="choco-face front"></div>
+          <div class="choco-face side"></div>
+        </div>
+      </div>
+      <div class="floating-item choco choco-2">
+        <div class="choco-cube">
+          <div class="choco-face top"></div>
+          <div class="choco-face front"></div>
+          <div class="choco-face side"></div>
+        </div>
+      </div>
+      <div class="floating-item choco choco-3">
+        <div class="choco-cube">
+          <div class="choco-face top"></div>
+          <div class="choco-face front"></div>
+          <div class="choco-face side"></div>
+        </div>
+      </div>
+      <div class="floating-item choco choco-4">
+        <div class="choco-cube">
+          <div class="choco-face top"></div>
+          <div class="choco-face front"></div>
+          <div class="choco-face side"></div>
+        </div>
+      </div>
+      <div class="floating-item choco choco-5">
+        <div class="choco-cube">
+          <div class="choco-face top"></div>
+          <div class="choco-face front"></div>
+          <div class="choco-face side"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-header-text">
+        <h1 class="hero-title">WELCOME TO JM CAKES</h1>
+        <p class="hero-subtext">
+          JM Cake is a family-owned bakery established in 2015 in Hobart. Since day one, our goal has been simple: to craft beautiful, handmade cakes that make people smile.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#cakes" class="btn-gold-pill">SHOP NOW</a>
+          <a href="#about" class="btn-outline-pill">EXPLORE MORE</a>
+        </div>
+      </div>
+
+      <!-- Centerpiece: Multi-tier Chocolate Drip Cake with Chocolate Splashes -->
+      <div class="hero-cake-display">
+        <!-- Melted chocolate splash arcs on left & right -->
+        <div class="choco-splash splash-left" aria-hidden="true">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M180 160C140 190 70 190 30 140C0 100 20 50 40 30C55 15 70 45 60 70C50 95 70 130 110 130C140 130 170 110 180 160Z" fill="url(#splashGrad)"/>
+            <defs>
+              <linearGradient id="splashGrad" x1="0" y1="0" x2="200" y2="200" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#4E231C"/>
+                <stop offset="0.6" stop-color="#2D120E"/>
+                <stop offset="1" stop-color="#19080A"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <div class="cake-image-wrap">
+          <div class="cake-shadow"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85" 
+            alt="Handcrafted JM Chocolate Drip Celebration Cake with Whipped Cream and Ripe Berries" 
+            class="hero-cake-img"
+          >
+          <div class="cake-shine-badge">
+            <span class="shine-star">✦</span> Signature Belgian Truffle
+          </div>
+        </div>
+
+        <div class="choco-splash splash-right" aria-hidden="true">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 160C60 190 130 190 170 140C200 100 180 50 160 30C145 15 130 45 140 70C150 95 130 130 90 130C60 130 30 110 20 160Z" fill="url(#splashGrad2)"/>
+            <defs>
+              <linearGradient id="splashGrad2" x1="200" y1="0" x2="0" y2="200" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#4E231C"/>
+                <stop offset="0.6" stop-color="#2D120E"/>
+                <stop offset="1" stop-color="#19080A"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Bottom Hero Banner with Prompt from Image -->
+      <div class="hero-bottom-prompt">
+        <h2 class="hero-bottom-tagline">FOR EVERY OCCASION DESIGNED JUST FOR YOU</h2>
+        <button class="btn-gold-pill btn-custom-order" onclick="openCustomizerModal()">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> ORDER NOW FOR CUSTOMIZED CAKE
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OCCASION CATEGORIES ================= -->
+  <section class="occasions-banner" id="occasions">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="sub-heading-pill">ARTISAN CREATIONS</span>
+        <h2 class="section-title">Cakes for Every Milestone</h2>
+        <div class="ornament-divider"><span>❦</span></div>
+        <p class="section-desc">Click any category to filter our live bakery collection below.</p>
+      </div>
+
+      <div class="category-cards-grid">
+        <div class="category-card" onclick="filterCakes('birthday')">
+          <div class="cat-img-box">
+            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=500&q=80" alt="Birthday Cakes">
+          </div>
+          <div class="cat-pill">Birthday Cakes</div>
+        </div>
+
+        <div class="category-card" onclick="filterCakes('wedding')">
+          <div class="cat-img-box">
+            <img src="https://images.unsplash.com/photo-1525258946800-98cfd641d0de?auto=format&fit=crop&w=500&q=80" alt="Wedding Cakes">
+          </div>
+          <div class="cat-pill">Wedding Cakes</div>
+        </div>
+
+        <div class="category-card" onclick="filterCakes('holiday')">
+          <div class="cat-img-box">
+            <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=500&q=80" alt="Christmas & Festive Cakes">
+          </div>
+          <div class="cat-pill">Christmas & Holiday</div>
+        </div>
+
+        <div class="category-card" onclick="filterCakes('anniversary')">
+          <div class="cat-img-box">
+            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=500&q=80" alt="Anniversary Specials">
+          </div>
+          <div class="cat-pill">Anniversary Specials</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CAKES THAT CELEBRATE LIFE (CREAM SECTION FROM IMAGE) ================= -->
+  <section class="celebrate-life-section" id="about">
+    <div class="container">
+      <div class="cream-feature-card">
+        <div class="cream-feature-grid">
+          
+          <!-- Left: Big Chocolate Ribbon Cake Showcase -->
+          <div class="cream-image-col">
+            <div class="ribbon-cake-wrapper">
+              <img 
+                src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?auto=format&fit=crop&w=700&q=85" 
+                alt="JM Signature Silk Chocolate Bow Cake" 
+                class="ribbon-cake-img"
+              >
+              <div class="award-tag">
+                <i class="fa-solid fa-crown"></i>
+                <div>
+                  <strong>Hobart's Best</strong>
+                  <span>Pastry Award 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Narrative & Highlights -->
+          <div class="cream-text-col">
+            <div class="category-pill-sm">ABOUT JM CAKES</div>
+            <h2 class="cream-heading">CAKES THAT CELEBRATE LIFE</h2>
+            
+            <p class="cream-lead">
+              We bake all our cakes and sweets fresh in store daily, using only the finest local ingredients. Whether you’re popping in for a slice or planning a big celebration, we offer a cozy space for catch-ups, family time, or a well-deserved treat.
+            </p>
+            <p class="cream-body">
+              At JM Cake, every cake is more than just dessert—it’s a centerpiece, a lasting taste, and sometimes even the surprise itself. Whether it’s a milestone birthday cake, a show-stopping wedding creation, or a thoughtful corporate cake, our cakes are made with love, care, and creativity. We proudly serve as a leading bakery in Hobart, delivering sweetness across Hobart and nearby suburbs. From custom cakes to vegan treats, we cater to all tastes, styles, and dietary needs.
+            </p>
+
+            <!-- Mini Highlight Thumbnails as shown on reference top right -->
+            <div class="cream-mini-thumbs">
+              <div class="mini-thumb-item" onclick="filterCakes('chocolate')">
+                <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=250&q=80" alt="Pure Buttercream">
+                <span>Handmade Layers</span>
+              </div>
+              <div class="mini-thumb-item" onclick="openCustomizerModal()">
+                <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?auto=format&fit=crop&w=250&q=80" alt="Custom Fondant Art">
+                <span>Bespoke Accents</span>
+              </div>
+              <div class="mini-thumb-item" onclick="filterCakes('dietary')">
+                <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=250&q=80" alt="Daily Fresh Fruits">
+                <span>Tasmanian Berries</span>
+              </div>
+            </div>
+
+            <div class="cream-action-row">
+              <a href="#tasting" class="btn-dark-pill">BOOK A CAKE CONSULTATION</a>
+              <div class="baker-signature">
+                <span class="sig-name">Chef Julian & Marie</span>
+                <span class="sig-title">Founders & Master Pâtissiers</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= READY TO BRING YOUR DREAM CAKE TO LIFE? ================= -->
+  <section class="dream-cake-banner">
+    <div class="container dream-cake-wrap">
+      <div class="dream-content-grid">
+        <div class="dream-text-col">
+          <span class="sub-heading-pill">BESPOKE ORDERS</span>
+          <h2 class="dream-heading">READY TO BRING YOUR DREAM CAKE TO LIFE?</h2>
+          <p class="dream-subtext">
+            Get in touch with our friendly team for a free quote or consultation — we love helping you plan something truly special. From multi-tiered cascading florals to sculptural chocolate art, nothing is out of reach.
+          </p>
+          <div class="dream-btn-group">
+            <button class="btn-gold-pill" onclick="openCustomizerModal()">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> ORDER NOW
+            </button>
+            <a href="tel:111-000-111" class="btn-outline-pill">
+              <i class="fa-solid fa-phone"></i> CALL 111-000-111
+            </a>
+          </div>
+        </div>
+
+        <!-- Polaroid Tilted Cards as seen in reference image -->
+        <div class="polaroid-cluster" aria-label="Recent bespoke customer creations">
+          <div class="polaroid-card pol-1" onclick="openQuickView('cake-7')">
+            <div class="tape-strip"></div>
+            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=400&q=80" alt="Custom Drip Cake">
+            <span class="pol-caption">Golden Honeycomb Drip</span>
+          </div>
+          <div class="polaroid-card pol-2" onclick="openQuickView('cake-2')">
+            <div class="tape-strip"></div>
+            <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=400&q=80" alt="Berry Shortcake">
+            <span class="pol-caption">Summer Berry Velvet (GF)</span>
+          </div>
+          <div class="polaroid-card pol-3" onclick="openQuickView('cake-4')">
+            <div class="tape-strip"></div>
+            <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=400&q=80" alt="Floral Wedding Cake">
+            <span class="pol-caption">Botanical 2-Tier Rose</span>
+          </div>
+          <div class="polaroid-card pol-4" onclick="openQuickView('cake-1')">
+            <div class="tape-strip"></div>
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80" alt="Chocolate Indulgence">
+            <span class="pol-caption">Belgian Silk Truffle</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SPECIAL DIETARY OPTIONS (EXACT TO REFERENCE) ================= -->
+  <section class="special-dietary-section" id="dietary">
+    <div class="container">
+      <div class="dietary-wrapper">
+        <div class="section-title-wrap text-center">
+          <span class="sub-heading-pill">ALL TASTE BUDS ARE WELCOME</span>
+          <h2 class="section-title">SPECIAL DIETARY OPTIONS</h2>
+          <div class="ornament-divider"><span>❦</span></div>
+          <p class="section-desc">
+            We believe everyone deserves cake, no matter what. That’s why we offer delicious inclusive options. Every bite is just as delightful as our classic cakes. Click any card to filter below.
+          </p>
+        </div>
+
+        <div class="dietary-interactive-stage">
+          <!-- Floating Badge 1: Gluten-Free -->
+          <div class="dietary-card-floating df-left-top" onclick="filterCakes('gluten-free')" role="button" tabindex="0">
+            <div class="diet-icon-badge"><i class="fa-solid fa-wheat-awn-circle-exclamation"></i></div>
+            <h4>GLUTEN-FREE CAKES (GF)</h4>
+            <p>Tested for sensitive guests & celiac safe preparation. Made with fine almond flour and Tasmanian churned butter.</p>
+            <span class="diet-tag">Click to View GF Cakes &rarr;</span>
+          </div>
+
+          <!-- Center Strawberry Drip Cake Display on Pedestal -->
+          <div class="dietary-cake-center">
+            <div class="cake-pedestal">
+              <div class="pedestal-plate"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=650&q=85" 
+                alt="Gluten Free and Vegan Strawberry Drip Cake" 
+                class="dietary-center-img"
+              >
+            </div>
+            <!-- Floating berries around strawberry cake -->
+            <div class="diet-strawberry ds-1">🍓</div>
+            <div class="diet-strawberry ds-2">🍓</div>
+          </div>
+
+          <!-- Floating Badge 2: Eggless & Vegan -->
+          <div class="dietary-card-floating df-right-top" onclick="filterCakes('vegan')" role="button" tabindex="0">
+            <div class="diet-icon-badge"><i class="fa-solid fa-seedling"></i></div>
+            <h4>EGGLESS & VEGAN</h4>
+            <p>Rich, moist, and plant-based. Prepared using whipped oat ganache, Belgian dark cocoa, and organic vanilla beans.</p>
+            <span class="diet-tag">Click to View Vegan &rarr;</span>
+          </div>
+
+          <!-- Floating Badge 3: Low Sugar / Diabetic Friendly -->
+          <div class="dietary-card-floating df-left-bottom" onclick="filterCakes('nut-safe')" role="button" tabindex="0">
+            <div class="diet-icon-badge"><i class="fa-solid fa-shield-halved"></i></div>
+            <h4>NUT-FREE & NUT-SAFE</h4>
+            <p>Strictly segregated nut-safe kitchen protocols for school events, kids birthdays, and peace of mind.</p>
+            <span class="diet-tag">Kid & Allergy Safe &rarr;</span>
+          </div>
+
+          <!-- Floating Badge 4: Refined Sugar Conscious -->
+          <div class="dietary-card-floating df-right-bottom" onclick="openCustomizerModal()" role="button" tabindex="0">
+            <div class="diet-icon-badge"><i class="fa-solid fa-apple-whole"></i></div>
+            <h4>SUGAR CONSCIOUS</h4>
+            <p>Naturally sweetened with dates, maple, or monk fruit on request for dietary management without loss of crumb softness.</p>
+            <span class="diet-tag">Custom Order Option &rarr;</span>
+          </div>
+        </div>
+
+        <div class="dietary-footer-cta text-center">
+          <button class="btn-gold-pill" onclick="filterCakes('dietary')">
+            <i class="fa-solid fa-filter"></i> VIEW ALL DIETARY-FRIENDLY CAKES
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CAKE MENU & FEATURED CATALOG ================= -->
+  <section class="cakes-catalog-section" id="cakes">
+    <div class="container">
+      <div class="section-title-wrap text-center">
+        <span class="sub-heading-pill">OUR SWEET COLLECTION</span>
+        <h2 class="section-title">Signature Cakes & Confections</h2>
+        <div class="ornament-divider"><span>❦</span></div>
+        <p class="section-desc">Select your favorite from our daily bakery lineup or order ahead for local Hobart pickup & delivery.</p>
+      </div>
+
+      <!-- Catalog Search Bar & Category Tabs -->
+      <div class="catalog-controls">
+        <div class="catalog-search-wrap">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="catalogSearchInput" placeholder="Search cakes by flavor, dietary, occasion (e.g. 'vegan', 'chocolate', 'wedding')..." oninput="handleCatalogSearch(this.value)">
+          <button id="clearSearchBtn" class="clear-search-btn" onclick="clearCatalogSearch()">&times;</button>
+        </div>
+
+        <div class="catalog-filter-tabs">
+          <button class="tab-btn active" data-filter="all">All Creations</button>
+          <button class="tab-btn" data-filter="chocolate">Chocolate & Truffle</button>
+          <button class="tab-btn" data-filter="birthday">Birthday</button>
+          <button class="tab-btn" data-filter="wedding">Wedding & Elegance</button>
+          <button class="tab-btn" data-filter="holiday">Christmas & Festive</button>
+          <button class="tab-btn" data-filter="anniversary">Anniversary</button>
+          <button class="tab-btn" data-filter="dietary">Gluten-Free & Vegan</button>
+          <button class="tab-btn" data-filter="pastry">Pastries & Cupcakes</button>
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Injected via JavaScript with animations -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= INSPIRATION GALLERY GRID (FROM REFERENCE BOTTOM ROW) ================= -->
+  <section class="gallery-strip-section" id="gallery">
+    <div class="container-fluid">
+      <div class="section-title-wrap text-center">
+        <span class="sub-heading-pill">FRESH FROM OUR KITCHEN</span>
+        <h2 class="section-title">Follow Us @JMCakesHobart</h2>
+        <div class="ornament-divider"><span>❦</span></div>
+      </div>
+
+      <div class="gallery-flex-row">
+        <div class="gallery-col" onclick="openQuickView('cake-8')">
+          <div class="gallery-photo-card">
+            <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?auto=format&fit=crop&w=400&q=80" alt="Artisan Chocolate Cupcakes">
+            <div class="gallery-overlay">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Triple Choc Cupcakes</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-col" onclick="openQuickView('cake-7')">
+          <div class="gallery-photo-card">
+            <img src="https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=400&q=80" alt="Tiered Vanilla Caramel Cake">
+            <div class="gallery-overlay">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Salted Caramel 2-Tier</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-col" onclick="openQuickView('cake-5')">
+          <div class="gallery-photo-card">
+            <img src="https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?auto=format&fit=crop&w=400&q=80" alt="Birthday Celebration Candles">
+            <div class="gallery-overlay">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Candlelight Birthday Joy</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-col" onclick="openQuickView('cake-4')">
+          <div class="gallery-photo-card">
+            <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=400&q=80" alt="Floral Pastel Celebration">
+            <div class="gallery-overlay">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Rose Gold Buttercream</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-col" onclick="openQuickView('cake-1')">
+          <div class="gallery-photo-card">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80" alt="Belgian Fudge Drip Cake">
+            <div class="gallery-overlay">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Belgian Silk Ganache</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TASTING & CUSTOM ORDER CONSULTATION ================= -->
+  <section class="consultation-section" id="tasting">
+    <div class="container">
+      <div class="consultation-card">
+        <div class="consultation-grid">
+          <div class="consult-info">
+            <span class="sub-heading-pill">BESPOKE EXPERIENCE</span>
+            <h2 class="consult-title">Book a Cake Tasting & Design Session</h2>
+            <p class="consult-text">
+              Planning a wedding, corporate anniversary, or special milestone? Sit down with Chef Julian at our Hobart studio. Sample our curated flavor flights and design your showstopper.
+            </p>
+            
+            <div class="consult-perks">
+              <div class="perk-item">
+                <i class="fa-solid fa-utensils"></i>
+                <div>
+                  <strong>Flight of 6 Flavors</strong>
+                  <span>Sample our top cake and buttercream combinations.</span>
+                </div>
+              </div>
+              <div class="perk-item">
+                <i class="fa-solid fa-palette"></i>
+                <div>
+                  <strong>Live Digital Mockup & Sketch</strong>
+                  <span>Coordinate colors, flowers, and scale with your event palette.</span>
+                </div>
+              </div>
+              <div class="perk-item">
+                <i class="fa-solid fa-truck"></i>
+                <div>
+                  <strong>Chilled Delivery Coordination</strong>
+                  <span>White-glove climate-controlled setup directly at your venue.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="consult-form-box">
+            <h3>Request Consultation or Quote</h3>
+            <form id="consultForm" onsubmit="handleConsultSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cName">Your Name *</label>
+                  <input type="text" id="cName" required placeholder="e.g. Sarah Jenkins">
+                </div>
+                <div class="form-group">
+                  <label for="cPhone">Phone Number *</label>
+                  <input type="tel" id="cPhone" required placeholder="0400 000 000">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cEmail">Email Address *</label>
+                  <input type="email" id="cEmail" required placeholder="sarah@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="cOccasion">Occasion Type</label>
+                  <select id="cOccasion">
+                    <option value="Wedding">Wedding Reception</option>
+                    <option value="Birthday">Milestone Birthday</option>
+                    <option value="Anniversary">Anniversary Celebration</option>
+                    <option value="Corporate">Corporate Gala</option>
+                    <option value="Holiday">Christmas / Holiday Party</option>
+                    <option value="Other">Custom Celebration</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="cDate">Event Date *</label>
+                  <input type="date" id="cDate" required>
+                </div>
+                <div class="form-group">
+                  <label for="cGuests">Estimated Guests</label>
+                  <input type="number" id="cGuests" min="10" max="600" placeholder="e.g. 75">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="cNotes">Design Ideas, Colors & Dietary Needs</label>
+                <textarea id="cNotes" rows="3" placeholder="Tell us your theme, flavor dreams, or dietary constraints (GF, Vegan, Nut-free)..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-gold btn-block">
+                <i class="fa-solid fa-paper-plane"></i> Send Booking Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT & LOCATION ================= -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-card-grid">
+        <div class="contact-card">
+          <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>Hobart Atelier</h3>
+          <p>42 Salamanca Place<br>Hobart TAS 7000, Australia</p>
+          <span class="c-note">Free parking out front & pickup bay</span>
+        </div>
+
+        <div class="contact-card">
+          <div class="c-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>Bakery Hours</h3>
+          <p>Tuesday &ndash; Saturday: 8:00 AM &ndash; 6:00 PM<br>Sunday: 9:00 AM &ndash; 3:00 PM<br>Monday: Private Tasting Sessions</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="c-icon"><i class="fa-solid fa-phone-volume"></i></div>
+          <h3>Direct Orders</h3>
+          <p><strong>Hotline:</strong> 111-000-111<br><strong>Email:</strong> orders@jmcakes.com.au<br><strong>Same-Day Dispatch:</strong> Available before 11 AM</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <div class="footer-logo">
+            <span class="f-logo-jm">JM</span>
+            <span class="f-logo-cakes">CAKES</span>
+          </div>
+          <p class="footer-bio">
+            Family-owned artisan bakery established in 2015 in Hobart. Dedicated to crafting memories with luxury cakes, ethical local ingredients, and meticulous craftsmanship.
+          </p>
+          <div class="footer-social-links">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="javascript:void(0)" onclick="filterCakes('birthday')">Birthday Cakes</a></li>
+            <li><a href="javascript:void(0)" onclick="filterCakes('wedding')">Wedding Masterpieces</a></li>
+            <li><a href="javascript:void(0)" onclick="filterCakes('holiday')">Christmas & Festive Cakes</a></li>
+            <li><a href="javascript:void(0)" onclick="filterCakes('gluten-free')">Gluten-Free Delights</a></li>
+            <li><a href="javascript:void(0)" onclick="filterCakes('vegan')">Eggless & Vegan Cakes</a></li>
+            <li><a href="#about">Our Story Since 2015</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="javascript:void(0)" onclick="openCustomizerModal()">Custom Cake Designer</a></li>
+            <li><a href="#tasting">Cake Tasting Flights</a></li>
+            <li><a href="#tasting">Corporate Catering</a></li>
+            <li><a href="#contact">Hobart Delivery Zones</a></li>
+            <li><a href="#contact">Care & Storage Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col newsletter-col">
+          <h4>Sweet Club & Secret Perks</h4>
+          <p>Subscribe for seasonal flavor launches, exclusive tasting invitations, and holiday preorder slots.</p>
+          <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button>
+          </form>
+          <span class="form-disclaimer">We respect your privacy. Unsubscribe anytime.</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 JM Cakes Pty Ltd. All Rights Reserved. Crafted with passion in Hobart.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Allergen Notice</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= INTERACTIVE CUSTOM CAKE BUILDER MODAL ================= -->
+  <div class="modal-backdrop" id="customizerModal" aria-hidden="true" onclick="handleBackdropClick(event, 'customizerModal')">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="customizerTitle">
+      <button class="modal-close-btn" onclick="closeCustomizerModal()" aria-label="Close modal">&times;</button>
+      
+      <div class="modal-header">
+        <span class="modal-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Live Visual Customizer</span>
+        <h2 id="customizerTitle">Build Your Dream Cake</h2>
+        <p>Design your custom celebration cake in real time. Instant pricing & pastry chef review.</p>
+      </div>
+
+      <div class="modal-body-grid">
+        <!-- Interactive Visual Preview -->
+        <div class="builder-preview-col">
+          <div class="live-cake-stage">
+            <div class="tier-stack" id="tierVisual">
+              <!-- Tier 3 (Top) -->
+              <div class="cake-tier tier-top" id="visTierTop">
+                <div class="tier-frosting"></div>
+                <div class="tier-drip" id="visDrip"></div>
+                <div class="tier-toppings" id="visTopping">🍓 ✨ 🍒</div>
+                <div class="tier-inscription" id="visInscriptionBadge"></div>
+              </div>
+              <!-- Tier 2 (Middle) -->
+              <div class="cake-tier tier-mid" id="visTierMid">
+                <div class="tier-frosting"></div>
+              </div>
+              <!-- Tier 1 (Base) -->
+              <div class="cake-tier tier-base" id="visTierBase">
+                <div class="tier-frosting"></div>
+                <div class="cake-platter"></div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="builder-summary-card">
+            <div class="sum-row">
+              <span>Configuration:</span>
+              <strong id="sumSummary">2 Tiers &bull; Belgian Chocolate</strong>
+            </div>
+            <div class="sum-row">
+              <span>Estimated Servings:</span>
+              <strong id="sumServings">25 &ndash; 35 Guests</strong>
+            </div>
+            <div class="sum-row">
+              <span>Selected Topping:</span>
+              <strong id="sumTopping">Fresh Berries & Gold Flakes</strong>
+            </div>
+            <div class="sum-row price-highlight">
+              <span>Total Price:</span>
+              <span class="total-price" id="customPriceDisplay">$185.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Customizer Controls Form -->
+        <div class="builder-controls-col">
+          <form id="cakeCustomizerForm" onsubmit="handleCustomOrderSubmit(event)">
+            
+            <!-- Step 1: Cake Tiers -->
+            <div class="control-section">
+              <label class="control-label">1. Choose Tiers / Size</label>
+              <div class="tier-radio-group">
+                <label class="tier-option">
+                  <input type="radio" name="cakeTiers" value="1" onchange="updateCakeCustomizer()">
+                  <div class="tier-btn-box">
+                    <strong>Single Tier (8")</strong>
+                    <span>Serves 12-16</span>
+                    <span class="price-add">Base $95</span>
+                  </div>
+                </label>
+                <label class="tier-option">
+                  <input type="radio" name="cakeTiers" value="2" checked onchange="updateCakeCustomizer()">
+                  <div class="tier-btn-box">
+                    <strong>2 Tiers (6" + 9")</strong>
+                    <span>Serves 25-35</span>
+                    <span class="price-add">+$90</span>
+                  </div>
+                </label>
+                <label class="tier-option">
+                  <input type="radio" name="cakeTiers" value="3" onchange="updateCakeCustomizer()">
+                  <div class="tier-btn-box">
+                    <strong>3 Tiers (Showstopper)</strong>
+                    <span>Serves 50-75</span>
+                    <span class="price-add">+$195</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 2: Sponge Flavour -->
+            <div class="control-section">
+              <label class="control-label" for="spongeFlavor">2. Sponge Base Flavour</label>
+              <select id="spongeFlavor" class="custom-select" onchange="updateCakeCustomizer()">
+                <option value="choco" data-color="#3d1e15" data-name="Belgian Dark Chocolate Fudge" selected>Belgian Dark Chocolate Fudge</option>
+                <option value="vanilla" data-color="#fdf6e7" data-name="Madagascan Vanilla Bean">Madagascan Vanilla Bean</option>
+                <option value="redvelvet" data-color="#821c25" data-name="Ruby Red Velvet & Cream Cheese">Ruby Red Velvet & Cream Cheese</option>
+                <option value="matcha" data-color="#738959" data-name="Kyoto Matcha & White Chocolate">Kyoto Matcha & White Chocolate</option>
+                <option value="caramel" data-color="#a0683a" data-name="Salted Butter Caramel">Salted Butter Caramel</option>
+              </select>
+            </div>
+
+            <!-- Step 3: Dietary Preference -->
+            <div class="control-section">
+              <label class="control-label">3. Dietary Requirements</label>
+              <div class="diet-checkbox-group">
+                <label class="pill-check">
+                  <input type="checkbox" id="dietGF" onchange="updateCakeCustomizer()">
+                  <span>Gluten-Free (GF) (+$15)</span>
+                </label>
+                <label class="pill-check">
+                  <input type="checkbox" id="dietVegan" onchange="updateCakeCustomizer()">
+                  <span>100% Vegan (Egg & Dairy Free) (+$15)</span>
+                </label>
+                <label class="pill-check">
+                  <input type="checkbox" id="dietNutFree">
+                  <span>Nut-Free Kitchen Batch (Free)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 4: Finish & Drip -->
+            <div class="control-section">
+              <label class="control-label">4. Finish & Luxury Drip</label>
+              <div class="chips-group">
+                <label class="chip-option">
+                  <input type="radio" name="cakeDrip" value="chocolate" checked onchange="updateCakeCustomizer()">
+                  <span>Rich Chocolate Drip</span>
+                </label>
+                <label class="chip-option">
+                  <input type="radio" name="cakeDrip" value="gold" onchange="updateCakeCustomizer()">
+                  <span>24k Gold Caramel Drip</span>
+                </label>
+                <label class="chip-option">
+                  <input type="radio" name="cakeDrip" value="berry" onchange="updateCakeCustomizer()">
+                  <span>Raspberry Ruby Drip</span>
+                </label>
+                <label class="chip-option">
+                  <input type="radio" name="cakeDrip" value="none" onchange="updateCakeCustomizer()">
+                  <span>Naked / Smooth (No Drip)</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 5: Toppings & Embellishments -->
+            <div class="control-section">
+              <label class="control-label">5. Cake Crown & Toppings</label>
+              <div class="chips-group">
+                <label class="chip-option">
+                  <input type="radio" name="cakeTopping" value="berries" checked onchange="updateCakeCustomizer()">
+                  <span>🍓 Fresh Berries & Gold Flakes</span>
+                </label>
+                <label class="chip-option">
+                  <input type="radio" name="cakeTopping" value="macarons" onchange="updateCakeCustomizer()">
+                  <span>🍬 Chocolate Macarons & Truffles (+$10)</span>
+                </label>
+                <label class="chip-option">
+                  <input type="radio" name="cakeTopping" value="floral" onchange="updateCakeCustomizer()">
+                  <span>🌸 Organic Edible Rose Florals (+$12)</span>
+                </label>
+                <label class="chip-option">
+                  <input type="radio" name="cakeTopping" value="minimal" onchange="updateCakeCustomizer()">
+                  <span>✨ Minimalist Whipped Rosettes</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Step 6: Cake Inscription -->
+            <div class="control-section">
+              <label class="control-label" for="customInscription">6. Custom Chocolate Plaque Inscription (Optional)</label>
+              <input type="text" id="customInscription" maxlength="40" placeholder="e.g. Happy 30th Birthday Chloe!" class="custom-input" oninput="updateInscriptionPreview(this.value)">
+              <span class="input-helper">Live preview appears on the cake above.</span>
+            </div>
+
+            <div class="builder-submit-row">
+              <button type="submit" class="btn-gold btn-block">
+                <i class="fa-solid fa-cart-plus"></i> Add Custom Cake to Bag
+              </button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= PRODUCT QUICK VIEW MODAL ================= -->
+  <div class="modal-backdrop" id="quickViewModal" aria-hidden="true" onclick="handleBackdropClick(event, 'quickViewModal')">
+    <div class="modal-card quick-view-card" role="dialog" aria-modal="true">
+      <button class="modal-close-btn" onclick="closeQuickView()" aria-label="Close modal">&times;</button>
+      <div class="quick-view-grid" id="quickViewContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= SHOPPING CART DRAWER ================= -->
+  <div class="cart-drawer-overlay" id="cartOverlay" onclick="closeCart()"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag">
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <h3>Your Sweet Bag (<span id="cartDrawerCount">0</span>)</h3>
+      </div>
+      <button class="cart-close-btn" onclick="closeCart()" aria-label="Close cart">&times;</button>
+    </div>
+
+    <!-- Free Delivery Progress Bar -->
+    <div class="delivery-progress-wrap" id="deliveryProgressWrap">
+      <div class="delivery-progress-text" id="deliveryProgressText">
+        Add $120.00 more for Free Hobart Delivery!
+      </div>
+      <div class="progress-bar-bg">
+        <div class="progress-bar-fill" id="deliveryProgressBar" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Empty state / dynamic items -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="delivery-option-select-wrap">
+        <label for="cartDeliveryMethod">Fulfillment Preference:</label>
+        <select id="cartDeliveryMethod" onchange="updateCartDelivery()">
+          <option value="pickup" selected>Hobart Salamanca Atelier Pickup (Free)</option>
+          <option value="courier">Chilled Hobart Courier Delivery</option>
+          <option value="regional">Tasmanian Regional Chilled Dispatch (+$25)</option>
+        </select>
+      </div>
+
+      <div class="cart-summary-line">
+        <span>Delivery Fee:</span>
+        <strong id="cartDeliveryCost" class="green-text">FREE</strong>
+      </div>
+      
+      <div class="cart-summary-line cart-total-line">
+        <span>Estimated Total:</span>
+        <span class="cart-total-amount" id="cartSubtotal">$0.00</span>
+      </div>
+      
+      <button class="btn-gold btn-block btn-checkout" onclick="openCheckoutModal()">
+        <i class="fa-solid fa-lock"></i> Proceed to Secure Checkout
+      </button>
+      <div class="cart-security-badge">
+        <i class="fa-solid fa-shield-halved"></i> 100% Artisan Guarantee &bull; Fresh Daily in Hobart
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= CHECKOUT MODAL ================= -->
+  <div class="modal-backdrop" id="checkoutModal" aria-hidden="true" onclick="handleBackdropClick(event, 'checkoutModal')">
+    <div class="modal-card checkout-modal-card">
+      <button class="modal-close-btn" onclick="closeCheckoutModal()">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge"><i class="fa-solid fa-shield-halved"></i> 256-Bit SSL Encrypted</span>
+        <h2>Complete Your Cake Order</h2>
+        <p>Confirm delivery date, address, and secure your celebration slot.</p>
+      </div>
+
+      <form id="checkoutForm" onsubmit="processOrderCheckout(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="chkName">Full Name *</label>
+            <input type="text" id="chkName" required placeholder="Jane Doe">
+          </div>
+          <div class="form-group">
+            <label for="chkPhone">Phone (For courier delivery SMS) *</label>
+            <input type="tel" id="chkPhone" required placeholder="0400 123 456">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="chkEmail">Email Address *</label>
+            <input type="email" id="chkEmail" required placeholder="jane@example.com">
+          </div>
+          <div class="form-group">
+            <label for="chkDate">Pickup / Delivery Date *</label>
+            <input type="date" id="chkDate" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="chkAddress">Delivery Address (or enter 'Store Pickup')</label>
+          <input type="text" id="chkAddress" placeholder="e.g. 15 Sandy Bay Rd, Hobart TAS 7005" required>
+        </div>
+
+        <div class="form-group">
+          <label for="chkNotes">Order Notes / Gate Instructions / Dietary Reminders</label>
+          <textarea id="chkNotes" rows="2" placeholder="Leave at reception, call upon arrival, etc."></textarea>
+        </div>
+
+        <div class="checkout-order-summary" id="checkoutSummaryBox">
+          <!-- Summary injected here -->
+        </div>
+
+        <button type="submit" class="btn-gold btn-block">
+          <i class="fa-solid fa-check-circle"></i> Confirm & Place Order
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="toast-container" id="toastBox" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
